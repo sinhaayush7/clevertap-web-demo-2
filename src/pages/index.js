@@ -36,6 +36,7 @@ const Home = () => {
             </div>
             <div id="hero-banner" style={{ marginTop: '10px'}}></div>
             <div>{navigator.userAgent}</div>
+            <div>{clevertap.getCleverTapID()}</div>
             {/* <div style={{ position: 'fixed', bottom: 0, marginBottom: '20px' }}><button  id='bell-selector' style={{ marginLeft: '8px'}}>Inbox</button></div> */}
         </div>
     );
