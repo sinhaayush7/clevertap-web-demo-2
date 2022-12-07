@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import clevertap from 'clevertap-web-sdk';
+import clevertap from './clevertap';
 
 clevertap.setOffline(true)
 clevertap.init('ZWW-WWW-WWRZ')

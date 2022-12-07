@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import clevertap from 'clevertap-web-sdk';
+import clevertap from '../clevertap';
 
 const Home = () => {
     const [text, setText] = useState('')

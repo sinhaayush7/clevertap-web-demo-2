@@ -1,6 +1,6 @@
 // import logo from './logo.svg';
 import './App.css';
-import clevertap from 'clevertap-web-sdk'
+import clevertap from './clevertap'
 import { Component } from 'react';
 import React from 'react';
 import Navbar from './components/Navbar';
