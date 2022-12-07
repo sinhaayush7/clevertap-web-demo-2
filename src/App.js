@@ -16,42 +16,42 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = { localStorage: '', cacheData: ''};
-    this.clickEvent = this.clickEvent.bind(this);
+    // this.clickEvent = this.clickEvent.bind(this);x
   }
 
-  // componentDidMount() {
-  //   clevertap.spa = true
+  componentDidMount() {
+    clevertap.spa = true
+  }
+
+  // clickEvent() {
+  //   clevertap.onUserLogin.push({ 
+  //     "Site": {
+  //       "Name": "Sonam",                         // String
+  //       "Identity": 610260622,                      // String or number
+  //       "Email": "amee10Aug@test.com",               // Email address of the user
+  //       "Phone": "+14159551234",                    // Phone (with the country code)
+  //       "Gender": "F",                              // Can be either M or F
+  //       // "DOB": new Date(),                          // Date of Birth. Javascript Date object
+  //       // "Photo": 'www.foobar.com/image.jpeg',       // URL to the Image
+  //       "Price": 69.99,
+  //     }
+  //   })
+
+  //   clevertap.notifications.push({
+  //     "titleText":"Would you like to receive Push Notifications?",
+  //     "bodyText":"We promise to only send you relevant content and give you updates on your transactions",
+  //     "okButtonText":"Ok",
+  //     "rejectButtonText":"Cancel",
+  //     "okButtonColor":"#F28046",
+  //     "askAgainTimeInSeconds":5,
+  //     "serviceWorkerPath": "./firebase-messaging-sw.js"
+  //   });
+  //   clevertap.event.push("Product rated");
+
+  //   document.addEventListener('CT_web_native_display', function(e) {
+  //     console.log('Event is ', clevertap.renderNotificationViewed(e.detail))
+  //   })
   // }
-
-  clickEvent() {
-    clevertap.onUserLogin.push({ 
-      "Site": {
-        "Name": "Sonam",                         // String
-        "Identity": 610260622,                      // String or number
-        "Email": "amee10Aug@test.com",               // Email address of the user
-        "Phone": "+14159551234",                    // Phone (with the country code)
-        "Gender": "F",                              // Can be either M or F
-        // "DOB": new Date(),                          // Date of Birth. Javascript Date object
-        // "Photo": 'www.foobar.com/image.jpeg',       // URL to the Image
-        "Price": 69.99,
-      }
-    })
-
-    clevertap.notifications.push({
-      "titleText":"Would you like to receive Push Notifications?",
-      "bodyText":"We promise to only send you relevant content and give you updates on your transactions",
-      "okButtonText":"Ok",
-      "rejectButtonText":"Cancel",
-      "okButtonColor":"#F28046",
-      "askAgainTimeInSeconds":5,
-      "serviceWorkerPath": "./firebase-messaging-sw.js"
-    });
-    clevertap.event.push("Product rated");
-
-    document.addEventListener('CT_web_native_display', function(e) {
-      console.log('Event is ', clevertap.renderNotificationViewed(e.detail))
-    })
-  }
 
   render() {
     return (

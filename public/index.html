@@ -28,6 +28,50 @@
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
+    <!-- <script>
+    require([
+        "jquery",
+        "https://cdn1.stamped.io/files/widget.min.js"
+    ], function(jQuery) {
+        StampedFn.init({
+            apiKey: 'pubkey\u002D3Xx68Q478kJ4Lz57cA1aat3MQ3j7kt',
+            storeUrl: 'https\u003A\u002F\u002Fdev.withclarity.com\u002F'
+        });
+
+        function addEventListenerStamped(el, eventName, handler) {
+            if (el.addEventListener) {
+                el.addEventListener(eventName, handler);
+            } else {
+                el.attachEvent('on' + eventName, function() {
+                    handler.call(el);
+                });
+            }
+        }
+
+        addEventListenerStamped(document, "stamped:reviews:loaded", function(e) {
+            var ratingCount = jQuery("meta[itemprop=reviewCount]").attr("content");
+            var ratingValue = jQuery("meta[itemprop=ratingValue]").attr("content");
+            var richSnippet = {
+                "@context": "http://schema.org",
+                "@type": "Product",
+                "name": document.title
+            }
+
+            if (parseInt(ratingValue) > 0) {
+                richSnippet.aggregateRating = {
+                    "@type": "AggregateRating",
+                    "ratingValue": ratingValue,
+                    "reviewCount": ratingCount
+                }
+            }
+
+            var script = document.createElement('script');
+            script.type = 'application/ld+json';
+            script.innerHTML = JSON.stringify(richSnippet);
+            document.getElementsByTagName('head')[0].appendChild(script);
+        });
+    })
+</script> -->
     <div id="root"></div>
     <!--
       This HTML file is a template.
